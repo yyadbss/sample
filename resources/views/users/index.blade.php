@@ -7,7 +7,7 @@
         <ul class="users">
             @foreach ($users as $user)
                 <li>
-                    <img src="{{ $user->gravatar() }}" alt="{{ $user->name }}" class="gravatar"/>
+                    <img src="{{ $user->gravatar('140') }}" alt="{{ $user->name }}" class="gravatar"/>
                     <a href="{{ route('users.show', $user->id )}}" class="username">{{ $user->name }}</a>
 
                     @can('destroy', $user)
